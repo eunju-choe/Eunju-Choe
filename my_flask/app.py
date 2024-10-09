@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template # type: ignore
 
 app = Flask(__name__)
 
@@ -8,7 +8,7 @@ def home():
 
 @app.route('/about')
 def about():
-    return "This is the About Page!"
+    return render_template('about.html')
 
 @app.route('/contact')
 def contact():
